@@ -1,4 +1,11 @@
-<h1>WealthO</h1>
-
-<p>We are her to protect you and all of your transactions</p>
-<p>PS. find me in app/views/main/home.html.erb</p>
+<!-- _homepage.html.erb -->
+<section class="Homepage">
+  <% unless current_user %>
+    <h1 class="LoginLogo">WealthO</h1>
+  <% end %>
+  <% if current_user %>
+  <div class="HomepageContent">
+    <p>Home page</p>
+  </div>
+  <% end %>
+</section>

@@ -1,15 +1,82 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.DIR {
+  color: red;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.LoginPage {
+  display: grid;
+  place-items: center;
+}
+
+.LoginLogo {
+  text-align: center;
+  color: #444444;
+  font-size: 15vw;
+  padding: 65% 0 40% 0;
+}
+
+.LoginUl a, ul {
+  text-decoration: none;
+  list-style: none;
+  color: #444444;
+}
+
+.LoginUl {
+  display: grid;
+  font-size: 25px;
+  padding: 3vw;
+  border-radius: 8px;
+  gap: 10px;
+  font-variant-caps: all-petite-caps;
+}
+
+.Glow {
+  background-color: #4079bb;
+}
+
+.LoginLi {
+  padding: 5vw 32vw 5vw 32vw;
+}
+
+.LogInHeader {
+  text-align: center;
+  width: 100%;
+  background-color: #3778c2;
+  font-variant-caps: all-petite-caps;
+  color: white;
+  padding: 2%;
+}
+
+.LogInGroup {
+  padding: 5vw 0 0 0;
+}
+
+.LogInField input {
+  width: 100%;
+  height: 40px;
+  font-size: 5vw;
+}
+
+.LoginNext input {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 3.5vw;
+  right: 3.5vw;
+  color: white;
+  font-size: 18px;
+}
+
+.ForgotPassword a {
+  text-decoration: none;
+  color: gray;
+}
+
+.ForgotPassword {
+  text-align: center;
+  margin-top: 5vw;
+}

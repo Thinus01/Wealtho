@@ -11,7 +11,12 @@
   </head>
 
   <body>
-  <%= render 'layouts/navbar' %>
+    <% if current_user %>
+      <%= yield %>
+      <%= render 'layouts/loginpage' %>
+    <% else %>
     <%= yield %>
+      <%= render 'layouts/loginpage' %>
+    <% end %>
   </body>
 </html>
