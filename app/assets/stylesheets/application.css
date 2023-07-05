@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Proxima Nova', sans-serif;
 }
 
 .LoginPage {
@@ -79,4 +80,104 @@
 .ForgotPassword {
   text-align: center;
   margin-top: 5vw;
+}
+
+/* Home/Categories page*/
+
+.CatNav {
+  display: flex;
+  justify-content: center;
+  background-color: #3778c2;
+  color: white;
+  gap: 25vw;
+  font-size: 5vw;
+  padding: 6vw 0 6vw 0;
+}
+.CatNavLines {
+  rotate: 90deg;
+}
+
+.SignOut {
+  border: none;
+  background-color: #3778c200;
+  color: white;
+  font-size: 5vw;
+}
+
+.CatFoot {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #5fb523;
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+
+.AddCatButton {
+  background-color: #3778c200;
+  border: 1px solid white;
+  padding: 4vw 25vw 4vw 25vw;
+  margin: 5vw 0 5vw 0;
+  color: white;
+  font-size: 5vw;
+}
+
+.CatList {
+  color: gray;
+  margin-top: 30px;
+}
+
+.CatTitle {
+  font-size: 6vw;
+  padding-bottom: 2vw;
+}
+
+.CatPrice {
+  color: rgb(63, 63, 63);
+  font-size: 6vw;
+  font-weight: 700;
+  padding-left: 18vw;
+}
+
+.CatContent {
+  display: flex;
+  align-items: center;
+}
+
+.ImgDiv {
+  width: 100px;
+  height: 100%;
+}
+
+.ImgDiv img {
+  width: 100%;
+  height: auto;
+}
+
+.CatDesc {
+  margin-left: 10px;
+}
+
+/* Add categories */
+
+.ACatNav {
+  display: flex;
+  justify-content: center;
+  background-color: #3778c2;
+  color: white;
+  gap: 20vw;
+  font-size: 5vw;
+  padding: 6vw 0 6vw 0;
+}
+.ACatNavLines {
+  rotate: 90deg;
+}
+
+.ASignOut {
+  border: none;
+  background-color: #3778c200;
+  color: white;
+  font-size: 5vw;
 }
