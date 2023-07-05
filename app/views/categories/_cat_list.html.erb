@@ -5,20 +5,20 @@
 </nav>
 <div class="CatList">
 <% @categories.each do |category| %>
-<div class="CatContent">
-  <div class="ImgDiv">
-    <img src="<%= %>"> <!-- #Missing Image -->
-  </div>
-  <div class="CatDesc">
-    <div class="CatTitle">
-      <%= category.name %>
+  <div class="CatContent" onclick="window.location.href='/transaction?category_id=<%= category.id %>';">
+    <div class="ImgDiv">
+      <img src="">
     </div>
-    <div class="CatDate">
-      <%= category.created_at.strftime("%d %b %Y") %>
+    <div class="CatDesc">
+      <div class="CatTitle">
+        <%= category.name %>
+      </div>
+      <div class="CatDate">
+        <%= category.created_at&.strftime("%d %b %Y") %>
+      </div>
     </div>
+    <div class="CatPrice">$150.0</div>
   </div>
-  <div class="CatPrice">$150.0</div>
-</div>
 <% end %>
 </div>
 <div class="CatFoot">
