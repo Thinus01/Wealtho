@@ -1,0 +1,20 @@
+<!-- app/views/categories/index.html.erb -->
+
+<div class="CatList">
+  <% @categories.each do |category| %>
+    <div class="CatContent">
+      <div class="ImgDiv">
+        <img src="<%= category.image.url %>">
+      </div>
+      <div class="CatDesc">
+        <div class="CatTitle">
+          <%= category.name %>
+        </div>
+        <div class="CatDate">
+          <%= category.created_at.strftime("%d %b %Y") %>
+        </div>
+      </div>
+      <div class="CatPrice">$150.0</div>
+    </div>
+  <% end %>
+</div>

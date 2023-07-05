@@ -1,0 +1,26 @@
+<nav class="CatNav">
+<p class="CatNavLines">|||</p>
+<p class='CatNavHeading'>CATEGORIES</p>
+<%= button_to "Out", destroy_user_session_path, method: :delete, class: 'SignOut' %>
+</nav>
+<div class="CatList">
+<% @categories.each do |category| %>
+<div class="CatContent">
+  <div class="ImgDiv">
+    <img src="<%= %>"> <!-- #Missing Image -->
+  </div>
+  <div class="CatDesc">
+    <div class="CatTitle">
+      <%= category.name %>
+    </div>
+    <div class="CatDate">
+      <%= category.created_at.strftime("%d %b %Y") %>
+    </div>
+  </div>
+  <div class="CatPrice">$150.0</div>
+</div>
+<% end %>
+</div>
+<div class="CatFoot">
+<%= link_to "Add new Category", new_category_path, class: "AddCatButton" %>
+</div>

@@ -4,8 +4,8 @@
     <h1 class="LoginLogo">WealthO</h1>
   <% end %>
   <% if current_user %>
-  <div class="HomepageContent">
-    <p>Home page</p>
-  </div>
+  <% if current_user %>
+    <%= render partial: 'categories/cat_list', locals: { categories: @categories } %>
+  <% end %>
   <% end %>
 </section>
