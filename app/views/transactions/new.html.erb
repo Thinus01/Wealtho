@@ -2,8 +2,8 @@
 
 <%= form_for @transaction, url: create_transaction_path do |f| %>
   <%= f.hidden_field :category_id, value: @category.id %>
-  <%= f.hidden_field :created_at, value: Time.current %>
-  
+  <%= f.hidden_field :updated_at, value: Time.current %>
+
   <div class="field">
     <%= f.label :transaction_name %><br>
     <%= f.text_field :transaction_name, autofocus: true %>

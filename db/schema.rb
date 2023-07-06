@@ -50,10 +50,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_152944) do
   create_table "transactions", force: :cascade do |t|
     t.string "transaction_name"
     t.decimal "transaction_price", precision: 8, scale: 2
-    t.string "category_name"
     t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "category_name"
     t.index ["category_id"], name: "index_transactions_on_category_id"
   end
 

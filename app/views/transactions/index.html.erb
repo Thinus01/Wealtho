@@ -21,7 +21,7 @@
           <%= transaction.transaction_name.present? ? transaction.transaction_name : 'No values' %>
         </div>
         <div class="CatDate">
-        <%= @transaction.created_at&.strftime("%d %b %Y %H:%M:%S") %>
+        <%= @category.updated_at&.strftime("%d %b %Y") %>
         </div>
       </div>
       <div class="NewTranPrice">
