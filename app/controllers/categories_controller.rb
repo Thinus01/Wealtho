@@ -3,7 +3,13 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.all.order(:id)
+    @category_totals = {}
+  
+    @categories.each do |category|
+      total_price = category.transactions.sum(:transaction_price)
+      @category_totals[category.id] = total_price
   end
+end
 
   def new
     @category = Category.new

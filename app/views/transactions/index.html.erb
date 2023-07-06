@@ -10,7 +10,7 @@
       <%= @category.name %>
     </div>
   </div>
-  <div class="CatPrice">$150.0</div>
+  <div class="CatPrice">$<%= @total_price %></div>
 </div>
 
 <% if @category.transactions.present? %>

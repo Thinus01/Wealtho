@@ -2,6 +2,8 @@ class TransactionsController < ApplicationController
 
     def index
       @category = Category.find(params[:category_id])
+      @transactions = @category.transactions
+      @total_price = @transactions.sum(:transaction_price)
     end
   
     def new
