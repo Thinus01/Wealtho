@@ -1,0 +1,38 @@
+<nav class="CatNav">
+<p class="CatNavLines">|||</p>
+<p class='CatNavHeading'>Transaction</p>
+<%= button_to "Out", destroy_user_session_path, method: :delete, class: 'SignOut' %>
+</nav>
+
+<div class="CatContent">
+  <div class="CatDesc">
+    <div class="CatTitle">
+      <%= @category.name %>
+    </div>
+  </div>
+  <div class="CatPrice">$150.0</div>
+</div>
+
+<% if @category.transactions.present? %>
+  <% @category.transactions.each do |transaction| %>
+    <div class="NewTranContent">
+      <div class="NewTranDesc">
+        <div class="NewTranTitle">
+          <%= transaction.transaction_name.present? ? transaction.transaction_name : 'No values' %>
+        </div>
+        <div class="CatDate">
+        <%= @transaction.created_at&.strftime("%d %b %Y %H:%M:%S") %>
+        </div>
+      </div>
+      <div class="NewTranPrice">
+        <%= transaction.transaction_price.present? ? "$#{transaction.transaction_price}" : 'No values' %>
+      </div>
+    </div>
+  <% end %>
+<% else %>
+  <p>No transactions found.</p>
+<% end %>
+
+<div class="CatFoot">
+  <%= link_to "Add new Transaction", new_transaction_path(category_id: @category.id), class: "AddCatButton" %>
+</div>

@@ -1,0 +1,20 @@
+<h1>New Transaction</h1>
+
+<%= form_for @transaction, url: create_transaction_path do |f| %>
+  <%= f.hidden_field :category_id, value: @category.id %>
+  <%= f.hidden_field :created_at, value: Time.current %>
+  
+  <div class="field">
+    <%= f.label :transaction_name %><br>
+    <%= f.text_field :transaction_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :transaction_price %><br>
+    <%= f.number_field :transaction_price %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Create Transaction" %>
+  </div>
+<% end %>
