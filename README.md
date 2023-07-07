@@ -108,7 +108,8 @@ If you like this project, please consider giving it a star.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
+- I would like to thank Gregoire Vella (https://www.behance.net/gregoirevella) for the design that my project is based on
+- If you want to see the great work he did that inspired this project you can see it here (https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
 - I would like to thank all code reviewers for making this project better.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

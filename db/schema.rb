@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_07_05_152944) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -41,7 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_152944) do
 
   create_table "categories", force: :cascade do |t|
     t.integer "author_id"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.string "name"
     t.float "amount"
     t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
@@ -52,7 +55,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_152944) do
   create_table "transactions", force: :cascade do |t|
     t.string "transaction_name"
     t.decimal "transaction_price", precision: 8, scale: 2
-    t.integer "category_id"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "category_name"
