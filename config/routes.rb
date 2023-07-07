@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   get '/transaction/:category_id', to: 'transactions#index', as: 'transaction_category'
   get '/transactions/new/:category_id', to: 'transactions#new', as: 'new_transaction'
   post '/transactions', to: 'transactions#create', as: 'create_transaction'
-  resources :transactions, only: [:new, :create]
-
+  resources :transactions, only: [:index, :new, :create]
+  get '/main/home', to: 'main#home'
 end
