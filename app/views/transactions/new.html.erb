@@ -1,30 +1,32 @@
 <nav class="CatNav">
 <p class="ACatNavLines">
-<%= link_to "<(", transaction_path(category_id: @category.id) %>
+<%= link_to "<", transaction_path(category_id: @category.id) %>
 </p>
 <p class='CatNavHeading'>New Transaction</p>
-<%= button_to "Out", destroy_user_session_path, method: :delete, class: 'SignOut' %>
+<%= button_to "Bye", destroy_user_session_path, method: :delete, class: 'SignOut' %>
 </nav>
 
 <%= form_for @transaction, url: create_transaction_path do |f| %>
   <%= f.hidden_field :category_id, value: @category.id %>
   <%= f.hidden_field :updated_at, value: Time.current %>
 
-  <div class="field">
-    <%= f.label :transaction_name %><br>
-    <%= f.text_field :transaction_name, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :transaction_price %><br>
-    <%= f.number_field :transaction_price %>
-  </div>
-
-  <div class="field">
-  <%= @category.name %>
+  <div class="ATranName">
+  <%= f.label :Name %><br>
+  <%= f.text_field :transaction_name, autofocus: true, placeholder: 'Enter transaction name' %>
 </div>
 
-  <div class="actions">
+<div class="ATranPrice">
+  <%= f.label :Price %><br>
+  <%= f.number_field :transaction_price, placeholder: 'Enter transaction price' %>
+</div>
+
+
+  <div class="ATranCat">
+  <%= f.label :Groups %><br>
+  <p class="ATranCatName"><%= @category.name %></p>
+</div>
+
+  <div class="ATranCreate">
     <%= f.submit "Create Transaction" %>
   </div>
 <% end %>

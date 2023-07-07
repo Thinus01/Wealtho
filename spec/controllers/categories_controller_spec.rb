@@ -3,16 +3,20 @@ require 'rails_helper'
 RSpec.describe Category, type: :model do
   describe 'validations' do
     it 'validates presence of name' do
-        category = Category.new(name: nil)
-        category.valid?
-        expect(category.errors[:name]).to include("can't be blank")
-      end
+      category = Category.new(name: nil)
+      category.valid?
+      expect(category.errors[:name]).to include("can't be blank")
+    end
 
     it 'validates presence of image' do
       category = Category.new(name: 'category', image: nil)
       expect(category).to_not be_valid
       expect(category.errors[:image]).to include("can't be blank")
     end
+  end
+
+  it 'belongs to user' do
+    expect(Category.reflect_on_association(:user).macro).to eq(:belongs_to)
   end
 
   describe 'associations' do
