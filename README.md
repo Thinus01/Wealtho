@@ -5,6 +5,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+    - [🚀 Live Demo](#live-demo)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -36,6 +37,16 @@
 - Create a category as well as transaction inside the category
 - List all recipes by users
 - Displays the total price of all transactions in the category 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> Add a link to your deployed project.
+
+- [Live Demo Link](https://wealtho.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
