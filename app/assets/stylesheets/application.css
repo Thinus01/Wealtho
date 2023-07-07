@@ -236,6 +236,54 @@ a {
   font-size: 5vw;
 }
 
+/* New Category */
+.CatField {
+  margin-bottom: 15px;
+  width: 99%;
+}
+
+.CatCreateField {
+  margin-bottom: 15px;
+  width: 99%;
+}
+
+.CatLabel {
+  font-weight: bold;
+}
+
+.CatInput {
+  width: 100%;
+  padding: 10px 0 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.CatActions {
+  text-align: center;
+  width: 100%;
+  background-color: #5fb523;
+  border: solid 1px white;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+}
+
+.CatButton {
+  background-color: #4caf4f00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border: solid 1px white;
+  padding: 5% 20% 5% 20%;
+  font-size: 5vw;
+  margin: 5%;
+}
+
+.CatButton:hover {
+  background-color: #45a049;
+}
+
 /* Transaction page */
 
 .TranNav {
