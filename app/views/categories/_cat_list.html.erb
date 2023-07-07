@@ -8,7 +8,12 @@
   <% total_price = category.transactions.sum(:transaction_price) %>
   <div class="CatContent" onclick="window.location.href='/transaction?category_id=<%= category.id %>';">
     <div class="ImgDiv">
-      <img src="">
+    <% if category.image.present? %>
+      <img src="<%= url_for(category.image) %>">
+    <% else %>
+      <!-- Placeholder image if no image is present -->
+      <img src="/assets/placeholder_image.jpg">
+    <% end %>
     </div>
     <div class="CatDesc">
       <div class="CatTitle">

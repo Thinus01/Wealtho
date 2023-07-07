@@ -1,10 +1,20 @@
 <nav class="CatNav">
-<p class="CatNavLines">|||</p>
+<p class="ACatNavLines">
+<%= link_to "<(", root_path %>
+</p>
 <p class='CatNavHeading'>Transaction</p>
 <%= button_to "Out", destroy_user_session_path, method: :delete, class: 'SignOut' %>
 </nav>
 
 <div class="CatContent">
+<div class="ImgDiv">
+<% if @category.image.present? %>
+  <img src="<%= url_for(@category.image) %>">
+<% else %>
+  <!-- Placeholder image if no image is present -->
+  <img src="/assets/placeholder_image.jpg">
+<% end %>
+</div>
   <div class="CatDesc">
     <div class="CatTitle">
       <%= @category.name %>
