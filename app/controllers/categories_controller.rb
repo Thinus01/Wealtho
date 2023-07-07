@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :set_active_storage_url_options, only: [:index, :show]
+  before_action :set_active_storage_url_options, only: %i[index show]
 
   def index
     @categories = current_user.categories.order(:id)
@@ -21,9 +21,9 @@ class CategoriesController < ApplicationController
 
   def create
     @category = current_user.categories.build(category_params)
-  
+
     if @category.save
-      redirect_to root_path, notice: "Category was successfully created."
+      redirect_to root_path, notice: 'Category was successfully created.'
     else
       render :new
     end

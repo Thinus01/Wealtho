@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe Category, type: :model do
   describe 'validations' do
     it 'validates presence of name' do
-        category = Category.new(name: nil)
-        category.valid?
-        expect(category.errors[:name]).to include("can't be blank")
-      end
+      category = Category.new(name: nil)
+      category.valid?
+      expect(category.errors[:name]).to include("can't be blank")
+    end
 
     it 'validates presence of image' do
       category = Category.new(name: 'category', image: nil)
