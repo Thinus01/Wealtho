@@ -1,9 +1,9 @@
-<nav class="CatNav">
+<nav class="TranNav">
 <p class="ACatNavLines">
-<%= link_to "<(", root_path %>
+<%= link_to "<", root_path %>
 </p>
 <p class='CatNavHeading'>Transaction</p>
-<%= button_to "Out", destroy_user_session_path, method: :delete, class: 'SignOut' %>
+<%= button_to "Bye", destroy_user_session_path, method: :delete, class: 'SignOut' %>
 </nav>
 
 <div class="CatContent">
@@ -15,12 +15,12 @@
   <img src="/assets/placeholder_image.jpg">
 <% end %>
 </div>
-  <div class="CatDesc">
-    <div class="CatTitle">
+  <div class="TranDesc">
+    <div class="TranTitle">
       <%= @category.name %>
     </div>
   </div>
-  <div class="CatPrice">$<%= @total_price %></div>
+  <div class="TranPrice">$<%= @total_price %></div>
 </div>
 
 <% if @category.transactions.present? %>
