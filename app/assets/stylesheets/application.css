@@ -20,15 +20,16 @@ a {
 
 .LoginLogo {
   text-align: center;
-  color: #444444;
+  color: #444;
   font-size: 15vw;
   padding: 65% 0 40% 0;
 }
 
-.LoginUl a, ul {
+.LoginUl a,
+ul {
   text-decoration: none;
   list-style: none;
-  color: #444444;
+  color: #444;
 }
 
 .LoginUl {
@@ -139,7 +140,7 @@ a {
   background-color: #3069a8;
 }
 
-/* Home/Categories page*/
+/* Home/Categories page */
 
 .CatNav {
   display: flex;
@@ -150,6 +151,7 @@ a {
   font-size: 5vw;
   padding: 6vw 0 6vw 0;
 }
+
 .CatNavLines {
   rotate: 90deg;
 }
@@ -264,14 +266,13 @@ a {
   background-color: #5fb523;
   border: solid 1px white;
   position: fixed;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0.1px;
+  left: 0.1px;
 }
 
 .CatButton {
   background-color: #4caf4f00;
   color: white;
-  border: none;
   border-radius: 4px;
   cursor: pointer;
   border: solid 1px white;
@@ -296,13 +297,6 @@ a {
   padding: 6vw 0 6vw 0;
 }
 
-.SignOut {
-  border: none;
-  background-color: #3778c200;
-  color: white;
-  font-size: 5vw;
-}
-
 .TranFoot {
   position: fixed;
   left: 0;
@@ -312,15 +306,6 @@ a {
   text-align: center;
   display: grid;
   place-items: center;
-}
-
-.AddCatButton {
-  background-color: #3778c200;
-  border: 1px solid white;
-  padding: 4vw 25vw 4vw 25vw;
-  margin: 5vw 0 5vw 0;
-  color: white;
-  font-size: 5vw;
 }
 
 .TranList {
@@ -343,16 +328,6 @@ a {
 .TranContent {
   display: flex;
   align-items: center;
-}
-
-.ImgDiv {
-  width: 100px;
-  height: 100%;
-}
-
-.ImgDiv img {
-  width: 100%;
-  height: auto;
 }
 
 .TranDesc {
@@ -385,7 +360,6 @@ a {
 .ATranName {
   padding: 5% 0 0 5%;
   font-size: 5vw;
-
 }
 
 .ATranName > input[type="text"] {
@@ -416,8 +390,8 @@ a {
 
 .ATranCreate {
   position: fixed;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0.1px;
+  left: 0.1px;
   width: 100%;
   background-color: #5fb523;
   display: grid;
