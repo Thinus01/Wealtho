@@ -7,6 +7,8 @@
 </nav>
 
 <%= form_for @category, url: categories_path do |f| %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name, autofocus: true %>
@@ -23,3 +25,4 @@
     <%= f.submit "Save" %>
   </div>
 <% end %>
+

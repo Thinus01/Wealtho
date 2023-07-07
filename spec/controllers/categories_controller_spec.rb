@@ -15,6 +15,10 @@ RSpec.describe Category, type: :model do
     end
   end
 
+  it 'belongs to user' do
+    expect(Category.reflect_on_association(:user).macro).to eq(:belongs_to)
+  end
+
   describe 'associations' do
     it 'has and belongs to many purchases with dependent destroy' do
       association = Category.reflect_on_association(:purchases)
