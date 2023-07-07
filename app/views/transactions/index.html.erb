@@ -1,0 +1,48 @@
+<nav class="CatNav">
+<p class="ACatNavLines">
+<%= link_to "<(", root_path %>
+</p>
+<p class='CatNavHeading'>Transaction</p>
+<%= button_to "Out", destroy_user_session_path, method: :delete, class: 'SignOut' %>
+</nav>
+
+<div class="CatContent">
+<div class="ImgDiv">
+<% if @category.image.present? %>
+  <img src="<%= url_for(@category.image) %>">
+<% else %>
+  <!-- Placeholder image if no image is present -->
+  <img src="/assets/placeholder_image.jpg">
+<% end %>
+</div>
+  <div class="CatDesc">
+    <div class="CatTitle">
+      <%= @category.name %>
+    </div>
+  </div>
+  <div class="CatPrice">$<%= @total_price %></div>
+</div>
+
+<% if @category.transactions.present? %>
+  <% @category.transactions.each do |transaction| %>
+    <div class="NewTranContent">
+      <div class="NewTranDesc">
+        <div class="NewTranTitle">
+          <%= transaction.transaction_name.present? ? transaction.transaction_name : 'No values' %>
+        </div>
+        <div class="CatDate">
+        <%= @category.updated_at&.strftime("%d %b %Y") %>
+        </div>
+      </div>
+      <div class="NewTranPrice">
+        <%= transaction.transaction_price.present? ? "$#{transaction.transaction_price}" : 'No values' %>
+      </div>
+    </div>
+  <% end %>
+<% else %>
+  <p>No transactions found.</p>
+<% end %>
+
+<div class="CatFoot">
+  <%= link_to "Add new Transaction", new_transaction_path(category_id: @category.id), class: "AddCatButton" %>
+</div>
