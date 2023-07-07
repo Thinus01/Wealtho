@@ -136,10 +136,6 @@ ul {
   cursor: pointer;
 }
 
-.SignUpActions input[type="submit"]:hover {
-  background-color: #3069a8;
-}
-
 /* Home/Categories page */
 
 .CatNav {
