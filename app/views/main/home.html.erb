@@ -1,11 +1,8 @@
-<!-- _homepage.html.erb -->
 <section class="Homepage">
   <% unless current_user %>
     <h1 class="LoginLogo">WealthO</h1>
   <% end %>
   <% if current_user %>
-  <% if current_user %>
     <%= render partial: 'categories/cat_list', locals: { categories: @categories } %>
-  <% end %>
   <% end %>
 </section>

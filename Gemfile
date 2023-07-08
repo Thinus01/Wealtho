@@ -35,7 +35,7 @@ gem 'letter_opener'
 
 gem 'jquery-rails'
 
-gem 'sqlite3'
+gem 'database_cleaner'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -66,6 +66,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 5.0'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers', '~> 4.0'
 end
 
 group :development do

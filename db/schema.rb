@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_04_141916) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_05_152944) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -40,8 +43,23 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_04_141916) do
   end
 
   create_table "categories", force: :cascade do |t|
-    t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.integer "author_id"
+    t.bigint "user_id"
     t.string "name"
+    t.float "amount"
+    t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_categories_on_user_id"
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.string "transaction_name"
+    t.decimal "transaction_price", precision: 8, scale: 2
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "category_name"
+    t.index ["category_id"], name: "index_transactions_on_category_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -58,4 +76,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_04_141916) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "categories", "users"
+  add_foreign_key "transactions", "categories"
 end

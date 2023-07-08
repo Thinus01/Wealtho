@@ -1,23 +1,28 @@
 <nav class="ACatNav">
-  <p class="ACatNavLines">|||</p>
+  <p class="ACatNavLines">
+  <%= link_to "<", root_path %>
+  </p>
   <p class='ACatNavHeading'>ADD CATEGORIES</p>
-  <%= button_to "Out", destroy_user_session_path, method: :delete, class: 'ASignOut' %>
+  <%= button_to "Bye", destroy_user_session_path, method: :delete, class: 'ASignOut' %>
 </nav>
 
-<%= form_for @category, url: categories_path do |f| %>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name, autofocus: true %>
+<%= form_for @category, url: categories_path, html: { class: "SignUpPage" } do |f| %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+
+  <div class="CatCreateField">
+    <%= f.label :name, class: "CatLabel" %><br>
+    <%= f.text_field :name, autofocus: true, class: "CatInput" %>
   </div>
 
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.file_field :image %>
+  <div class="CatField">
+    <%= f.label :image, class: "CatLabel" %><br>
+    <%= f.file_field :image, class: "CatInput" %>
   </div>
 
   <%= f.hidden_field :created_at, value: Time.current %>
 
-  <div class="actions">
-    <%= f.submit "Save" %>
+  <div class="CatActions">
+    <%= f.submit "Save", class: "CatButton" %>
   </div>
 <% end %>
+
