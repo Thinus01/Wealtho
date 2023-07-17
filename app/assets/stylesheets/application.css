@@ -1,5 +1,8 @@
-.DIR {
-  color: red;
+/* Shared styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Proxima Nova', sans-serif;
 }
 
 a {
@@ -7,406 +10,792 @@ a {
   color: white;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Proxima Nova', sans-serif;
+/* Mobile styles */
+@media only screen and (max-width: 767px) {
+  .DIR {
+    color: red;
+  }
+
+  .LoginPage,
+  .SignUpPage {
+    display: grid;
+    place-items: center;
+  }
+
+  .LoginLogo {
+    text-align: center;
+    color: #444;
+    font-size: 15vw;
+    padding: 65% 0 40% 0;
+  }
+
+  .LoginUl a,
+  ul {
+    text-decoration: none;
+    list-style: none;
+    color: #444;
+  }
+
+  .LoginUl {
+    display: grid;
+    font-size: 25px;
+    padding: 3vw;
+    border-radius: 8px;
+    gap: 10px;
+    font-variant-caps: all-petite-caps;
+  }
+
+  .Glow {
+    background-color: #4079bb;
+  }
+
+  .LoginLi {
+    padding: 5vw 32vw 5vw 32vw;
+  }
+
+  .LogInHeader {
+    text-align: center;
+    width: 100%;
+    background-color: #3778c2;
+    font-variant-caps: all-petite-caps;
+    color: white;
+    padding: 2%;
+  }
+
+  .LogInGroup {
+    padding: 5vw 0 0 0;
+  }
+
+  .LogInField input {
+    width: 100%;
+    height: 40px;
+    font-size: 5vw;
+  }
+
+  .LoginNext input {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 3.5vw;
+    right: 3.5vw;
+    color: white;
+    font-size: 18px;
+  }
+
+  .ForgotPassword a {
+    text-decoration: none;
+    color: gray;
+  }
+
+  .ForgotPassword {
+    text-align: center;
+    margin-top: 5vw;
+  }
+
+  /* Sign up page */
+  .SignUpHeader {
+    text-align: center;
+    width: 100%;
+    background-color: #3778c2;
+    font-variant-caps: all-petite-caps;
+    color: white;
+    padding: 2% 0 2% 0;
+  }
+
+  .SignUpField {
+    padding: 2vh 0;
+  }
+
+  .SignUpField label {
+    display: none;
+  }
+
+  .SignUpField input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    padding: 8px 0 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .SignUpActions {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .SignUpActions input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4079bb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* Home/Categories page */
+  .CatNav {
+    display: flex;
+    justify-content: center;
+    background-color: #3778c2;
+    color: white;
+    gap: 25vw;
+    font-size: 5vw;
+    padding: 6vw 0 6vw 0;
+  }
+
+  .CatNavLines {
+    rotate: 90deg;
+  }
+
+  .SignOut {
+    border: none;
+    background-color: #3778c200;
+    color: white;
+    font-size: 5vw;
+  }
+
+  .CatFoot {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #5fb523;
+    text-align: center;
+    display: grid;
+    place-items: center;
+  }
+
+  .AddCatButton {
+    background-color: #3778c200;
+    border: 1px solid white;
+    padding: 4vw 25vw 4vw 25vw;
+    margin: 5vw 0 5vw 0;
+    color: white;
+    font-size: 5vw;
+  }
+
+  .CatList {
+    color: gray;
+    margin-top: 30px;
+  }
+
+  .CatTitle {
+    font-size: 6vw;
+    padding-bottom: 2vw;
+  }
+
+  .CatPrice {
+    color: rgb(63, 63, 63);
+    font-size: 6vw;
+    font-weight: 700;
+    padding-left: 18vw;
+  }
+
+  .CatContent {
+    display: flex;
+    align-items: center;
+  }
+
+  .ImgDiv {
+    width: 100px;
+    height: 100%;
+  }
+
+  .ImgDiv img {
+    width: 100%;
+    height: auto;
+  }
+
+  .CatDesc {
+    margin-left: 10px;
+  }
+
+  /* Add categories */
+  .ACatNav {
+    display: flex;
+    justify-content: center;
+    background-color: #3778c2;
+    color: white;
+    gap: 20vw;
+    font-size: 5vw;
+    padding: 6vw 0 6vw 0;
+  }
+
+  .ASignOut {
+    border: none;
+    background-color: #3778c200;
+    color: white;
+    font-size: 5vw;
+  }
+
+  /* New Category */
+  .CatField {
+    margin-bottom: 15px;
+    width: 99%;
+  }
+
+  .CatCreateField {
+    margin-bottom: 15px;
+    width: 99%;
+  }
+
+  .CatLabel {
+    font-weight: bold;
+  }
+
+  .CatInput {
+    width: 100%;
+    padding: 10px 0 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .CatActions {
+    text-align: center;
+    width: 100%;
+    background-color: #5fb523;
+    border: solid 1px white;
+    position: fixed;
+    bottom: 0.1px;
+    left: 0.1px;
+  }
+
+  .CatButton {
+    background-color: #4caf4f00;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: solid 1px white;
+    padding: 5% 20% 5% 20%;
+    font-size: 5vw;
+    margin: 5%;
+  }
+
+  .CatButton:hover {
+    background-color: #45a049;
+  }
+
+  /* Transaction page */
+  .TranNav {
+    display: flex;
+    justify-content: center;
+    background-color: #3778c2;
+    color: white;
+    gap: 25vw;
+    font-size: 5vw;
+    padding: 6vw 0 6vw 0;
+  }
+
+  .TranFoot {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #5fb523;
+    text-align: center;
+    display: grid;
+    place-items: center;
+  }
+
+  .TranList {
+    color: gray;
+    margin-top: 30px;
+  }
+
+  .TranTitle {
+    font-size: 6vw;
+    padding-bottom: 2vw;
+  }
+
+  .TranPrice {
+    color: rgb(63, 63, 63);
+    font-size: 6vw;
+    font-weight: 700;
+    padding-left: 18vw;
+  }
+
+  .TranContent {
+    display: flex;
+    align-items: center;
+  }
+
+  .TranDesc {
+    margin-left: 10px;
+  }
+
+  /* Transaction list */
+  .NewTranContent {
+    display: flex;
+    align-items: center;
+    background-color: rgb(230, 230, 230);
+    border-radius: 8px;
+    margin: 5px 5% 5px 5%;
+    padding: 2%;
+    font-size: 5vw;
+    color: gray;
+  }
+
+  .NewTranDesc {
+    padding-right: 50%;
+  }
+
+  .NewTranPrice {
+    color: black;
+  }
+
+  /* New Transaction */
+  .ATranName {
+    padding: 5% 0 0 5%;
+    font-size: 5vw;
+  }
+
+  .ATranName > input[type="text"] {
+    width: 90%;
+    padding: 3%;
+    border-radius: 8px;
+    border: solid 1px rgb(230, 230, 230);
+    background-color: rgb(230, 230, 230);
+  }
+
+  .ATranPrice {
+    padding: 5% 0 0 5%;
+    font-size: 5vw;
+  }
+
+  .ATranPrice > input[type="number"] {
+    width: 90%;
+    padding: 3%;
+    border-radius: 8px;
+    border: solid 1px rgb(230, 230, 230);
+    background-color: rgb(230, 230, 230);
+  }
+
+  .ATranCat {
+    padding: 5% 0 0 5%;
+    font-size: 5vw;
+  }
+
+  .ATranCreate {
+    position: fixed;
+    bottom: 0.1px;
+    left: 0.1px;
+    width: 100%;
+    background-color: #5fb523;
+    display: grid;
+    place-items: center;
+  }
+
+  .ATranCreate input[type="submit"] {
+    padding: 5%;
+    font-size: 5vw;
+    border: white 1px solid;
+    background-color: #3778c200;
+    margin: 5%;
+    color: white;
+  }
+
+  .ATranCatName {
+    width: 90%;
+    padding: 3%;
+    border-radius: 8px;
+    border: solid 1px rgb(230, 230, 230);
+    background-color: rgb(230, 230, 230);
+  }
 }
 
-.LoginPage {
-  display: grid;
-  place-items: center;
-}
+/* Desktop styles */
+@media only screen and (min-width: 768px) {
+  .DIR {
+    color: red;
+  }
 
-.LoginLogo {
-  text-align: center;
-  color: #444;
-  font-size: 15vw;
-  padding: 65% 0 40% 0;
-}
+  .LoginPage,
+  .SignUpPage {
+    display: grid;
+    place-items: center;
+  }
 
-.LoginUl a,
-ul {
-  text-decoration: none;
-  list-style: none;
-  color: #444;
-}
+  .LoginLogo {
+    text-align: center;
+    color: #444;
+    font-size: 10vw;
+    padding: 10% 0;
+  }
 
-.LoginUl {
-  display: grid;
-  font-size: 25px;
-  padding: 3vw;
-  border-radius: 8px;
-  gap: 10px;
-  font-variant-caps: all-petite-caps;
-}
+  .LoginUl a,
+  ul {
+    text-decoration: none;
+    list-style: none;
+    color: #444;
+  }
 
-.Glow {
-  background-color: #4079bb;
-}
+  .LoginUl {
+    display: grid;
+    font-size: 25px;
+    padding: 3vw;
+    border-radius: 8px;
+    gap: 10px;
+    font-variant-caps: all-petite-caps;
+  }
 
-.LoginLi {
-  padding: 5vw 32vw 5vw 32vw;
-}
+  .Glow {
+    background-color: #4079bb;
+  }
 
-.LogInHeader {
-  text-align: center;
-  width: 100%;
-  background-color: #3778c2;
-  font-variant-caps: all-petite-caps;
-  color: white;
-  padding: 2%;
-}
+  .LoginLi {
+    padding: 2vw 40vw 2vw 40vw;
+  }
 
-.LogInGroup {
-  padding: 5vw 0 0 0;
-}
+  .LogInHeader {
+    text-align: center;
+    width: 100%;
+    background-color: #3778c2;
+    font-variant-caps: all-petite-caps;
+    color: white;
+    padding: 2%;
+  }
 
-.LogInField input {
-  width: 100%;
-  height: 40px;
-  font-size: 5vw;
-}
+  .LogInGroup {
+    padding: 5vw 0 0 0;
+  }
 
-.LoginNext input {
-  border: none;
-  background-color: rgba(0, 0, 0, 0);
-  position: absolute;
-  top: 3.5vw;
-  right: 3.5vw;
-  color: white;
-  font-size: 18px;
-}
+  .LogInField input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+  }
 
-.ForgotPassword a {
-  text-decoration: none;
-  color: gray;
-}
+  .LoginNext input {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 2vw;
+    right: 2vw;
+    color: white;
+    font-size: 18px;
+  }
 
-.ForgotPassword {
-  text-align: center;
-  margin-top: 5vw;
-}
+  .ForgotPassword a {
+    text-decoration: none;
+    color: gray;
+  }
 
-/* Sign up page */
+  .ForgotPassword {
+    text-align: center;
+    margin-top: 5vw;
+  }
 
-.SignUpPage {
-  display: grid;
-  place-items: center;
-}
+  /* Sign up page */
+  .SignUpHeader {
+    text-align: center;
+    width: 100%;
+    background-color: #3778c2;
+    font-variant-caps: all-petite-caps;
+    color: white;
+    padding: 2% 0 2% 0;
+  }
 
-.SignUpHeader {
-  text-align: center;
-  width: 100%;
-  background-color: #3778c2;
-  font-variant-caps: all-petite-caps;
-  color: white;
-  padding: 2% 0 2% 0;
-}
+  .SignUpField {
+    padding: 2vh 0;
+  }
 
-.SignUpField {
-  padding: 2vh 0;
-}
+  .SignUpField label {
+    display: none;
+  }
 
-.SignUpField label {
-  display: none;
-}
+  .SignUpField input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    padding: 8px 0 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
 
-.SignUpField input {
-  width: 100%;
-  height: 40px;
-  font-size: 16px;
-  padding: 8px 0 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
+  .SignUpActions {
+    text-align: center;
+    margin-top: 20px;
+  }
 
-.SignUpActions {
-  text-align: center;
-  margin-top: 20px;
-}
+  .SignUpActions input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4079bb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 
-.SignUpActions input[type="submit"] {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #4079bb;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+  /* Home/Categories page */
+  .CatNav {
+    display: flex;
+    justify-content: center;
+    background-color: #3778c2;
+    color: white;
+    gap: 25vw;
+    font-size: 2vw;
+    padding: 2vw;
+  }
 
-/* Home/Categories page */
+  .CatNavLines {
+    rotate: 90deg;
+  }
 
-.CatNav {
-  display: flex;
-  justify-content: center;
-  background-color: #3778c2;
-  color: white;
-  gap: 25vw;
-  font-size: 5vw;
-  padding: 6vw 0 6vw 0;
-}
+  .SignOut {
+    border: none;
+    background-color: #3778c200;
+    color: white;
+    font-size: 2vw;
+  }
 
-.CatNavLines {
-  rotate: 90deg;
-}
+  .CatFoot {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #5fb523;
+    text-align: center;
+    display: grid;
+    place-items: center;
+  }
 
-.SignOut {
-  border: none;
-  background-color: #3778c200;
-  color: white;
-  font-size: 5vw;
-}
+  .AddCatButton {
+    background-color: #3778c200;
+    border: 1px solid white;
+    padding: 2vw;
+    margin: 2vw 0;
+    color: white;
+    font-size: 2vw;
+  }
 
-.CatFoot {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #5fb523;
-  text-align: center;
-  display: grid;
-  place-items: center;
-}
+  .CatList {
+    color: gray;
+    margin-top: 3vw;
+  }
 
-.AddCatButton {
-  background-color: #3778c200;
-  border: 1px solid white;
-  padding: 4vw 25vw 4vw 25vw;
-  margin: 5vw 0 5vw 0;
-  color: white;
-  font-size: 5vw;
-}
+  .CatTitle {
+    font-size: 3vw;
+    padding-bottom: 1vw;
+  }
 
-.CatList {
-  color: gray;
-  margin-top: 30px;
-}
+  .CatPrice {
+    color: rgb(63, 63, 63);
+    font-size: 3vw;
+    font-weight: 700;
+    padding-left: 3vw;
+  }
 
-.CatTitle {
-  font-size: 6vw;
-  padding-bottom: 2vw;
-}
+  .CatContent {
+    display: flex;
+    align-items: center;
+  }
 
-.CatPrice {
-  color: rgb(63, 63, 63);
-  font-size: 6vw;
-  font-weight: 700;
-  padding-left: 18vw;
-}
+  .ImgDiv {
+    width: 100px;
+    height: 100%;
+  }
 
-.CatContent {
-  display: flex;
-  align-items: center;
-}
+  .ImgDiv img {
+    width: 100%;
+    height: auto;
+  }
 
-.ImgDiv {
-  width: 100px;
-  height: 100%;
-}
+  .CatDesc {
+    margin-left: 1vw;
+  }
 
-.ImgDiv img {
-  width: 100%;
-  height: auto;
-}
+  /* Add categories */
+  .ACatNav {
+    display: flex;
+    justify-content: center;
+    background-color: #3778c2;
+    color: white;
+    gap: 35vw;
+    font-size: 2vw;
+    padding: 2vw;
+  }
 
-.CatDesc {
-  margin-left: 10px;
-}
+  .ASignOut {
+    border: none;
+    background-color: #3778c200;
+    color: white;
+    font-size: 2vw;
+  }
 
-/* Add categories */
+  /* New Category */
+  .CatField {
+    margin-bottom: 1vw;
+    width: 99%;
+  }
 
-.ACatNav {
-  display: flex;
-  justify-content: center;
-  background-color: #3778c2;
-  color: white;
-  gap: 20vw;
-  font-size: 5vw;
-  padding: 6vw 0 6vw 0;
-}
+  .CatCreateField {
+    margin-bottom: 1vw;
+    width: 99%;
+  }
 
-.ASignOut {
-  border: none;
-  background-color: #3778c200;
-  color: white;
-  font-size: 5vw;
-}
+  .CatLabel {
+    font-weight: bold;
+  }
 
-/* New Category */
-.CatField {
-  margin-bottom: 15px;
-  width: 99%;
-}
+  .CatInput {
+    width: 100%;
+    padding: 1vw 0 1vw 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
 
-.CatCreateField {
-  margin-bottom: 15px;
-  width: 99%;
-}
+  .CatActions {
+    text-align: center;
+    width: 100%;
+    background-color: #5fb523;
+    border: solid 1px white;
+    position: fixed;
+    bottom: 0.1px;
+    left: 0.1px;
+  }
 
-.CatLabel {
-  font-weight: bold;
-}
+  .CatButton {
+    background-color: #4caf4f00;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: solid 1px white;
+    padding: 1% 5% 1% 5%;
+    font-size: 2vw;
+    margin: 1%;
+  }
 
-.CatInput {
-  width: 100%;
-  padding: 10px 0 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
+  .CatButton:hover {
+    background-color: #45a049;
+  }
 
-.CatActions {
-  text-align: center;
-  width: 100%;
-  background-color: #5fb523;
-  border: solid 1px white;
-  position: fixed;
-  bottom: 0.1px;
-  left: 0.1px;
-}
+  /* Transaction page */
+  .TranNav {
+    display: flex;
+    justify-content: center;
+    background-color: #3778c2;
+    color: white;
+    gap: 25vw;
+    font-size: 2vw;
+    padding: 2vw;
+  }
 
-.CatButton {
-  background-color: #4caf4f00;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  border: solid 1px white;
-  padding: 5% 20% 5% 20%;
-  font-size: 5vw;
-  margin: 5%;
-}
+  .TranFoot {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #5fb523;
+    text-align: center;
+    display: grid;
+    place-items: center;
+  }
 
-.CatButton:hover {
-  background-color: #45a049;
-}
+  .TranList {
+    color: gray;
+    margin-top: 3vw;
+  }
 
-/* Transaction page */
+  .TranTitle {
+    font-size: 3vw;
+    padding-bottom: 1vw;
+  }
 
-.TranNav {
-  display: flex;
-  justify-content: center;
-  background-color: #3778c2;
-  color: white;
-  gap: 25vw;
-  font-size: 5vw;
-  padding: 6vw 0 6vw 0;
-}
+  .TranPrice {
+    color: rgb(63, 63, 63);
+    font-size: 3vw;
+    font-weight: 700;
+    padding-left: 3vw;
+  }
 
-.TranFoot {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #5fb523;
-  text-align: center;
-  display: grid;
-  place-items: center;
-}
+  .TranContent {
+    display: flex;
+    align-items: center;
+  }
 
-.TranList {
-  color: gray;
-  margin-top: 30px;
-}
+  .TranDesc {
+    margin-left: 1vw;
+  }
 
-.TranTitle {
-  font-size: 6vw;
-  padding-bottom: 2vw;
-}
+  /* Transaction list */
+  .NewTranContent {
+    display: flex;
+    align-items: center;
+    background-color: rgb(230, 230, 230);
+    border-radius: 8px;
+    margin: 5px 5% 5px 5%;
+    padding: 1%;
+    font-size: 2vw;
+    color: gray;
+  }
 
-.TranPrice {
-  color: rgb(63, 63, 63);
-  font-size: 6vw;
-  font-weight: 700;
-  padding-left: 18vw;
-}
+  .NewTranDesc {
+    padding-right: 2vw;
+  }
 
-.TranContent {
-  display: flex;
-  align-items: center;
-}
+  .NewTranPrice {
+    color: black;
+  }
 
-.TranDesc {
-  margin-left: 10px;
-}
+  /* New Transaction */
+  .ATranName {
+    padding: 1% 0 0 2%;
+    font-size: 2vw;
+  }
 
-/* Transaction list */
+  .ATranName > input[type="text"] {
+    width: 90%;
+    padding: 1%;
+    border-radius: 8px;
+    border: solid 1px rgb(230, 230, 230);
+    background-color: rgb(230, 230, 230);
+  }
 
-.NewTranContent {
-  display: flex;
-  align-items: center;
-  background-color: rgb(230, 230, 230);
-  border-radius: 8px;
-  margin: 5px 5% 5px 5%;
-  padding: 2%;
-  font-size: 5vw;
-  color: gray;
-}
+  .ATranPrice {
+    padding: 1% 0 0 2%;
+    font-size: 2vw;
+  }
 
-.NewTranDesc {
-  padding-right: 50%;
-}
+  .ATranPrice > input[type="number"] {
+    width: 90%;
+    padding: 1%;
+    border-radius: 8px;
+    border: solid 1px rgb(230, 230, 230);
+    background-color: rgb(230, 230, 230);
+  }
 
-.NewTranPrice {
-  color: black;
-}
+  .ATranCat {
+    padding: 1% 0 0 2%;
+    font-size: 2vw;
+  }
 
-/* New Transaction */
+  .ATranCreate {
+    position: fixed;
+    bottom: 0.1px;
+    left: 0.1px;
+    width: 100%;
+    background-color: #5fb523;
+    display: grid;
+    place-items: center;
+  }
 
-.ATranName {
-  padding: 5% 0 0 5%;
-  font-size: 5vw;
-}
+  .ATranCreate input[type="submit"] {
+    padding: 1%;
+    font-size: 2vw;
+    border: white 1px solid;
+    background-color: #3778c200;
+    margin: 1%;
+    color: white;
+  }
 
-.ATranName > input[type="text"] {
-  width: 90%;
-  padding: 3%;
-  border-radius: 8px;
-  border: solid 1px rgb(230, 230, 230);
-  background-color: rgb(230, 230, 230);
-}
-
-.ATranPrice {
-  padding: 5% 0 0 5%;
-  font-size: 5vw;
-}
-
-.ATranPrice > input[type="number"] {
-  width: 90%;
-  padding: 3%;
-  border-radius: 8px;
-  border: solid 1px rgb(230, 230, 230);
-  background-color: rgb(230, 230, 230);
-}
-
-.ATranCat {
-  padding: 5% 0 0 5%;
-  font-size: 5vw;
-}
-
-.ATranCreate {
-  position: fixed;
-  bottom: 0.1px;
-  left: 0.1px;
-  width: 100%;
-  background-color: #5fb523;
-  display: grid;
-  place-items: center;
-}
-
-.ATranCreate input[type="submit"] {
-  padding: 5%;
-  font-size: 5vw;
-  border: white 1px solid;
-  background-color: #3778c200;
-  margin: 5%;
-  color: white;
-}
-
-.ATranCatName {
-  width: 90%;
-  padding: 3%;
-  border-radius: 8px;
-  border: solid 1px rgb(230, 230, 230);
-  background-color: rgb(230, 230, 230);
+  .ATranCatName {
+    width: 90%;
+    padding: 1%;
+    border-radius: 8px;
+    border: solid 1px rgb(230, 230, 230);
+    background-color: rgb(230, 230, 230);
+  }
 }
