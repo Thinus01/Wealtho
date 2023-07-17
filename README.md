@@ -20,7 +20,7 @@
 
 # 📖 Wealtho <a name="about-project"></a>
 
-**Wealtho** is a website made for users to create and share recipes. It allows you to select what ingredients you need and ad them to a list. We added support when you can select what food you own so that the website generates a list of items you need, followed by displaying the cost for the missing items. 
+**Wealtho** is a mobile-only website made for users to create and share recipes. It allows you to create the group you need and add transaction(s) to it. 
 
 ## 🛠 Built With <a name="built-with"></a>
 
