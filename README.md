@@ -88,6 +88,7 @@
 
 ## 🔭 Future Features <a name="future-features"></a>
 
+- [ ] **Integrate responsive web design**
 - [ ] **Optimized Database**
 - [ ] **Better UI Experience**
 
