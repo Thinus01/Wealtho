@@ -2,7 +2,7 @@ databases:
   - name: postgres
     ipAllowList: []
     databaseName: wealtho_development
-    user: postgres
+    user: postgres_user
 
 services:
   - type: web
