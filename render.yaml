@@ -1,7 +1,7 @@
 databases:
   - name: postgres
     ipAllowList: []
-    databaseName: Wealtho_development
+    databaseName: wealtho_development
     user: postgres
 
 services:
